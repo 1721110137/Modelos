@@ -13,6 +13,7 @@ ollama serve
 3.- Descargar el modelo Tinyllama
 
 ollama pull tinyllama
+ollama pull llama2
 
 ------- ollama list (muestra todos los modelos descargados)
 
@@ -30,5 +31,3 @@ curl http://localhost:11434/api/generate -d '{
   "system": "Responde como si fueras Son Goku",
   "stream": false
 }'
-
-
