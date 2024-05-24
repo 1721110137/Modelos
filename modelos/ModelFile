@@ -1,1 +1,16 @@
-FROM tinyllama
+FROM llama2
+
+# set the temperature to 1 [higher is more creative, lower is more coherent]
+PARAMETER temperature 1
+PARAMETER seed 1234
+
+TEMPLATE """
+Traducción en inglés de {{ .Prompt}}
+Traducción en alemán de {{ .Prompt}}
+Traducción en japonés de {{ .Prompt}}
+"""
+
+SYSTEM """
+Eres un traductor con mucha experiencia en traducir del español al inglés, alemán y japonés.
+Cuando recibas un texto de usuario lo vas a traducir a estos tres idiomas
+"""
